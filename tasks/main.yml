@@ -80,7 +80,7 @@
     {% endfor %}
     --domain={{ freeipaclient_domain }}
     --principal={{ freeipaclient_enroll_user }}
-    --password={{ freeipaclient_enroll_pass }}
+    --password='{{ freeipaclient_enroll_pass }}'
     --ssh-trust-dns
     --mkhomedir
     {{ '--enable-dns-updates' if freeipaclient_enable_dns_updates else ''}}
